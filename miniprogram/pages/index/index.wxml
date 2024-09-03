@@ -1,2 +1,2 @@
 <!--pages/index/index.wxml-->
-<CVCard></CVCard>
+<CVCard userId="0"></CVCard>

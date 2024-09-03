@@ -1,4 +1,6 @@
 <!--components/CVCard/index.wxml-->
-<view>
-  <text>这是一个CVCard组件</text>
+<view class="container">
+  <image src="{{avatarSrc}}"/>
+  <text>{{name}}</text>
+  <text>{{description}}</text>
 </view>
