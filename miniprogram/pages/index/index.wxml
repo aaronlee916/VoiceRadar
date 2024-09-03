@@ -1,2 +1,6 @@
 <!--pages/index/index.wxml-->
-<CVCard userId="0"></CVCard>
+<view>
+  <view wx:for="{{UserData}}">
+    <UserCard userId="{{item.id}}" />
+  </view>
+</view>

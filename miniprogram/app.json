@@ -1,8 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/search/search",
-    "pages/my/my"
+    "pages/detail/index",
+    "pages/landing/index",
+    "pages/my/index",
+    "pages/search/index",
+    "pages/profile/index",
+    "pages/register/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -22,13 +26,13 @@
         "selectedIconPath": "images/house1.png"
       },
       {
-        "pagePath": "pages/search/search",
+        "pagePath": "pages/search/index",
         "text": "搜索",
         "iconPath": "images/bubble_circle.png",
         "selectedIconPath": "images/bubble_circle1.png"
       },
       {
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/my/index",
         "text": "我的",
         "iconPath": "images/bubble_circle.png",
         "selectedIconPath": "images/bubble_circle1.png"

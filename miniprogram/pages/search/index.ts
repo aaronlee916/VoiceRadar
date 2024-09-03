@@ -1,5 +1,6 @@
-// pages/index/index.ts
-import { UserData } from '../../assets/data/userdata'
+// pages/search/index.ts
+import {trendingCV,trendingStaff} from '../../assets/data/trendingdata'
+import {UserData} from '../../assets/data/userdata'
 
 Page({
 
@@ -7,6 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    trendingCV,
+    trendingStaff,
     UserData
   },
 

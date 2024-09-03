@@ -1,13 +1,11 @@
-// pages/index/index.ts
-import { UserData } from '../../assets/data/userdata'
-
+// pages/my/index.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    UserData
+
   },
 
   /**

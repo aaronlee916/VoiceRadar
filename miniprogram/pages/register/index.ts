@@ -1,4 +1,4 @@
-// pages/my/my.ts
+// pages/register/index.ts
 Page({
 
   /**

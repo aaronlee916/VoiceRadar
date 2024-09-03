@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "CVCard":"/components/CVCard/index"
+    "UserCard":"/components/UserCard/index"
   }
 }

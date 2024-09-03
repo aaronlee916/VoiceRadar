@@ -1,0 +1,17 @@
+<!--pages/search/index.wxml-->
+<view>
+  <van-search placeholder="请输入搜索内容..."></van-search>
+  <text>热门CV</text>
+  <van-grid column-num="4">
+    <van-grid-item text="{{UserData[item].name}}" wx:for="{{ trendingCV }}" 
+    wx:for="{{8}}"
+     />
+  </van-grid>
+  <van-search placeholder="请输入搜索内容..."></van-search>
+  <text>热门STAFF</text>
+  <van-grid column-num="4">
+    <van-grid-item text="{{UserData[item].name}}" wx:for="{{ trendingStaff }}" 
+    wx:for="{{8}}"
+     />
+  </van-grid>
+</view>
