@@ -15,7 +15,7 @@ export const UserData = [{
 {
   "id": 1,
   "name": "喵胖",
-  "avatarLink": "/assets/avatars/0.png",
+  "avatarLink": "/assets/avatars/1.png",
   "linkedUserId": 1,
   "isCV": true,
   "isStaff": false,
@@ -29,7 +29,7 @@ export const UserData = [{
 {
   "id": 2,
   "name": "昊宇小鱼",
-  "avatarLink": "/assets/avatars/0.png",
+  "avatarLink": "/assets/avatars/2.png",
   "linkedUserId": 2,
   "isCV": true,
   "isStaff": false,
@@ -43,7 +43,7 @@ export const UserData = [{
 {
   "id": 3,
   "name": "貔貅",
-  "avatarLink": "/assets/avatars/0.png",
+  "avatarLink": "/assets/avatars/3.png",
   "linkedUserId": 3,
   "isCV": true,
   "isStaff": false,
@@ -57,7 +57,7 @@ export const UserData = [{
 {
   "id": 4,
   "name": "厌倦",
-  "avatarLink": "/assets/avatars/0.png",
+  "avatarLink": "/assets/avatars/4.png",
   "linkedUserId": 3,
   "isCV": true,
   "isStaff": false,
@@ -70,7 +70,7 @@ export const UserData = [{
 },{
   "id": 5,
   "name": "艾利克斯",
-  "avatarLink": "/assets/avatars/0.png",
+  "avatarLink": "/assets/avatars/5.png",
   "linkedUserId": 3,
   "isCV": true,
   "isStaff": false,
@@ -84,7 +84,7 @@ export const UserData = [{
 {
   "id": 6,
   "name": "金克斯",
-  "avatarLink": "/assets/avatars/0.png",
+  "avatarLink": "/assets/avatars/6.png",
   "linkedUserId": 3,
   "isCV": true,
   "isStaff": false,
@@ -98,7 +98,7 @@ export const UserData = [{
 {
   "id": 7,
   "name": "马克西姆",
-  "avatarLink": "/assets/avatars/0.png",
+  "avatarLink": "/assets/avatars/7.png",
   "linkedUserId": 3,
   "isCV": true,
   "isStaff": false,

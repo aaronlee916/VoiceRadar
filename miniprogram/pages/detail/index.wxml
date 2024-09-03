@@ -1,2 +1,2 @@
 <!--pages/detail/index.wxml-->
-<text>{{userName}}</text>
+<text wx:for="{{user}}">{{item+'\n'}}</text>

@@ -13,3 +13,13 @@ body{
   line-height: 50rpx;
   text-align: center;
 }
+/* .ageContent{
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+.ageHint{
+  line-height: 150rpx;
+  margin-left: 20rpx;
+}

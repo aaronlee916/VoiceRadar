@@ -9,13 +9,13 @@ Page({
    */
   data: {
     trendingCV,
-    currentValue: [0, 50],
     //currentlySearching字段代表当前tab页，0为找CV功能，1为找STAFF功能
     currentlySearching: 0,
     trendingStaff,
     UserData,
     active: 0,
     voiceAgeShow: false,
+    ageFieldValue:[20,80],
     sexFieldValue: null,
     sexSelectionShow: false,
     filterOptions: [],
@@ -45,8 +45,15 @@ Page({
   onVoiceAgeClick() {
     this.setData({ voiceAgeShow: true })
   },
-  onChange(event) {
+  onVoiceAgeClose(){
+    this.setData({voiceAgeShow:false})
+  },
+  onTabChange(event) {
     this.setData({ currentlySearching: event.detail.index })
+  },
+  onAgeChange(event){
+    console.log(event)
+    this.setData({ageFieldValue:event.detail})
   },
   onDrag(event) {
     this.setData({
@@ -64,6 +71,12 @@ Page({
   },
   onSexClick() {
     this.setData({ sexSelectionShow: true })
+  },
+  onSelectTrending(event){
+    wx.setStorageSync('routeToUserId',event.currentTarget.dataset.id)
+    wx.navigateTo({
+      url:`/pages/detail/index`,
+    })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    user:{},
     userName: ''
   },
 
@@ -14,7 +15,8 @@ Page({
    */
   onLoad() {
     let id = wx.getStorageSync('routeToUserId')
-    this.setData({ userName: UserData[id].name })
+    let user=UserData[id]
+    this.setData({ user,userName: user.name })
   },
 
   /**
