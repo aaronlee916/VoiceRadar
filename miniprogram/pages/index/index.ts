@@ -9,7 +9,11 @@ Page({
   data: {
     UserData
   },
-
+  getUserDetails(id:number){
+    wx.navigateTo({
+      url:`/pages/detail/index?id=${id}`,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

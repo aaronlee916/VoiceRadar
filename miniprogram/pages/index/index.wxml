@@ -1,6 +1,4 @@
 <!--pages/index/index.wxml-->
 <view>
-  <view wx:for="{{UserData}}">
-    <UserCard userId="{{item.id}}" />
-  </view>
+  <UserCard wx:for="{{UserData}}" userId="{{item.id}}" bind:tap="getUserDetails" data-type="{{item.id}}"/>
 </view>
