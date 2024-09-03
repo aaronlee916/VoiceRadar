@@ -9,39 +9,61 @@ Page({
    */
   data: {
     trendingCV,
-    currentlySearching:0,
+    currentValue: [0, 50],
+    //currentlySearching字段代表当前tab页，0为找CV功能，1为找STAFF功能
+    currentlySearching: 0,
     trendingStaff,
     UserData,
-    active:0,
-    voiceAgeShow:false,
-    sexFieldValue:null,
-    sexSelectionShow:false,
-    filterOptions:[],
-    sexOptions:[
+    active: 0,
+    voiceAgeShow: false,
+    sexFieldValue: null,
+    sexSelectionShow: false,
+    filterOptions: [],
+    sexOptions: [
       {
-        text:'男',
-        value:'male'
+        text: '男',
+        value: '男'
       },
       {
-        text:'女',
-        value:'female'
+        text: '女',
+        value: '女'
       }
-    ]
+    ],
+    voicePressureOptions: [
+      {
+        text: '大嗓',
+        value: '大嗓'
+      },
+      {
+        text: '小嗓',
+        value: '小嗓'
+      }
+    ],
+    voicePressureShow: false,
+    voicePressureValue:null
   },
-  onVoiceAgeClick(){
-    this.setData({voiceAgeShow:true})
+  onVoiceAgeClick() {
+    this.setData({ voiceAgeShow: true })
   },
   onChange(event) {
-    this.setData({currentlySearching:event.detail.index})
+    this.setData({ currentlySearching: event.detail.index })
   },
-  onSexClose(){
+  onDrag(event) {
+    this.setData({
+      currentValue: event.detail.value,
+    });
+  },
+  onSexClose() {
 
   },
-  onSexFinish(){
-
+  onSexFinish(event) {
+    this.setData({sexFieldValue:event.detail.value,sexSelectionShow:false})
   },
-  onSexClick(){
-    this.setData({sexSelectionShow:true})
+  onVoicePressureClick() {
+    this.setData({ voicePressureShow: true })
+  },
+  onSexClick() {
+    this.setData({ sexSelectionShow: true })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -56,7 +78,12 @@ Page({
   onReady() {
 
   },
-
+  onVoicePressureClose() {
+    this.setData({voicePressureShow:false})
+  },
+  onVoicePressureFinish(event){
+    this.setData({voicePressureValue:event.detail.value,voicePressureShow:false})
+  },
   /**
    * 生命周期函数--监听页面显示
    */

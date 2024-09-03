@@ -10,11 +10,14 @@
       <van-field value="{{ ageFieldValue }}" is-link readonly label="声线年龄" placeholder="请选择声线的大致年龄" bind:tap="onVoiceAgeClick" />
       <van-popup show="{{ voiceAgeShow }}" round position="bottom">
         <view>请输入年龄...</view>
-        <van-slider value="{{ [10, 50] }}" range bind:change="onChange" />
+        <van-slider value="{{ [10, 50] }}" use-button-slot range bind:change="onChange">
+          <view class="custom-button" slot="left-button">{{ currentValue[0] }}</view>
+          <view class="custom-button" slot="right-button">{{ currentValue[1] }}</view>
+        </van-slider>
       </van-popup>
-      <van-field value="{{ fieldValue }}" is-link readonly label="大/小嗓" placeholder="请选择声压类型" bind:tap="onVoicePressure" />
-      <van-popup show="{{ show }}" round position="bottom">
-        <van-cascader wx:if="{{ show }}" value="{{ cascaderValue }}" title="请选择所在地区" options="{{ options }}" bind:close="onClose" bind:finish="onFinish" />
+      <van-field value="{{ voicePressureValue }}" is-link readonly label="大/小嗓" placeholder="请选择声压类型" bind:tap="onVoicePressureClick" />
+      <van-popup show="{{ voicePressureShow }}" round position="bottom">
+        <van-cascader wx:if="{{ voicePressureShow }}" value="{{ voicePressureValue }}" title="请选择声压类型" options="{{ voicePressureOptions }}" bind:close="onVoicePressureClose" bind:finish="onVoicePressureFinish" />
       </van-popup>
       <text>热门CV</text>
       <van-grid column-num="4">
