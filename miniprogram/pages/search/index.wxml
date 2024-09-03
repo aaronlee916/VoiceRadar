@@ -1,17 +1,46 @@
 <!--pages/search/index.wxml-->
 <view>
-  <van-search placeholder="请输入搜索内容..."></van-search>
-  <text>热门CV</text>
-  <van-grid column-num="4">
-    <van-grid-item text="{{UserData[item].name}}" wx:for="{{ trendingCV }}" 
-    wx:for="{{8}}"
-     />
-  </van-grid>
-  <van-search placeholder="请输入搜索内容..."></van-search>
-  <text>热门STAFF</text>
-  <van-grid column-num="4">
-    <van-grid-item text="{{UserData[item].name}}" wx:for="{{ trendingStaff }}" 
-    wx:for="{{8}}"
-     />
-  </van-grid>
+  <van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="找CV">
+      <van-search placeholder="请输入搜索内容..."></van-search>
+      <van-field value="{{ sexFieldValue }}" is-link readonly label="性别" placeholder="请选择性别" bind:tap="onSexClick" />
+      <van-popup show="{{ sexSelectionShow }}" round position="bottom">
+        <van-cascader wx:if="{{ sexSelectionShow }}" value="{{ cascaderValue }}" title="请选择性别" options="{{ sexOptions }}" bind:close="onSexClose" bind:finish="onSexFinish" />
+      </van-popup>
+      <van-field value="{{ fieldValue }}" is-link readonly label="声线年龄" placeholder="请选择声线的大致年龄" bind:tap="onVoiceAgeClick" />
+      <van-popup show="{{ show }}" round position="bottom">
+        <van-cascader wx:if="{{ show }}" value="{{ cascaderValue }}" title="请选择所在地区" options="{{ options }}" bind:close="onClose" bind:finish="onFinish" />
+      </van-popup>
+      <van-field value="{{ fieldValue }}" is-link readonly label="大/小嗓" placeholder="请选择声压类型" bind:tap="onVoicePressure" />
+      <van-popup show="{{ show }}" round position="bottom">
+        <van-cascader wx:if="{{ show }}" value="{{ cascaderValue }}" title="请选择所在地区" options="{{ options }}" bind:close="onClose" bind:finish="onFinish" />
+      </van-popup>
+      <text>热门CV</text>
+      <van-grid column-num="4">
+        <van-grid-item text="{{UserData[item].name}}" wx:for="{{ trendingCV }}" wx:for="{{8}}" />
+      </van-grid>
+    </van-tab>
+    <van-tab title="找STAFF">
+      <van-search placeholder="请输入搜索内容..."></van-search>
+      <van-field value="{{ fieldValue }}" is-link readonly label="地区" placeholder="请选择所在地区" bind:tap="onClick" />
+      <van-popup show="{{ show }}" round position="bottom">
+        <van-cascader wx:if="{{ show }}" value="{{ cascaderValue }}" title="请选择所在地区" options="{{ options }}" bind:close="onClose" bind:finish="onFinish" />
+      </van-popup>
+      <van-field value="{{ fieldValue }}" is-link readonly label="地区" placeholder="请选择所在地区" bind:tap="onClick" />
+      <van-popup show="{{ show }}" round position="bottom">
+        <van-cascader wx:if="{{ show }}" value="{{ cascaderValue }}" title="请选择所在地区" options="{{ options }}" bind:close="onClose" bind:finish="onFinish" />
+      </van-popup>
+      <van-field value="{{ fieldValue }}" is-link readonly label="地区" placeholder="请选择所在地区" bind:tap="onClick" />
+      <van-popup show="{{ show }}" round position="bottom">
+        <van-cascader wx:if="{{ show }}" value="{{ cascaderValue }}" title="请选择所在地区" options="{{ options }}" bind:close="onClose" bind:finish="onFinish" />
+      </van-popup>
+      <text>热门STAFF</text>
+      <van-grid column-num="4">
+        <van-grid-item text="{{UserData[item].name}}" wx:for="{{ trendingStaff }}" wx:for="{{8}}" />
+      </van-grid>
+    </van-tab>
+
+  </van-tabs>
+
+
 </view>

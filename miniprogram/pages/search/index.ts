@@ -1,6 +1,6 @@
 // pages/search/index.ts
-import {trendingCV,trendingStaff} from '../../assets/data/trendingdata'
-import {UserData} from '../../assets/data/userdata'
+import { trendingCV, trendingStaff } from '../../assets/data/trendingdata'
+import { UserData } from '../../assets/data/userdata'
 
 Page({
 
@@ -9,10 +9,37 @@ Page({
    */
   data: {
     trendingCV,
+    currentlySearching:0,
     trendingStaff,
-    UserData
+    UserData,
+    active:0,
+    sexFieldValue:null,
+    sexSelectionShow:false,
+    filterOptions:[],
+    sexOptions:[
+      {
+        text:'男',
+        value:'male'
+      },
+      {
+        text:'女',
+        value:'female'
+      }
+    ]
   },
+  onVoiceAgeClick(){},
+  onChange(event) {
+    this.setData({currentlySearching:event.detail.index})
+  },
+  onSexClose(){
 
+  },
+  onSexFinish(){
+
+  },
+  onSexClick(){
+    this.setData({sexSelectionShow:true})
+  },
   /**
    * 生命周期函数--监听页面加载
    */
