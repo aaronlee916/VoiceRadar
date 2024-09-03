@@ -51,6 +51,14 @@ Component({
           description: UserData[this.properties.userId].description
         }
       )
+    },
+    getUserDetails(){
+      wx.navigateTo({
+        url:'/pages/detail/index',
+        routeOptions:{
+          id:this.properties.userId
+        }
+      })
     }
   }
 })

@@ -1,5 +1,5 @@
 <!--components/CVCard/index.wxml-->
-<view class="container">
+<view class="container" bind:tap="getUserDetails">
   <image src="{{avatarSrc}}"/>
   <text>{{name}}</text>
   <text>{{description}}</text>

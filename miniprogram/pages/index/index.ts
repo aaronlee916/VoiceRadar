@@ -7,12 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    UserData
-  },
-  getUserDetails(id:number){
-    wx.navigateTo({
-      url:`/pages/detail/index?id=${id}`,
-    })
+    UserData,
+    id:-1
   },
   /**
    * 生命周期函数--监听页面加载

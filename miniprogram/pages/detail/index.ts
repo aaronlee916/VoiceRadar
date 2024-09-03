@@ -1,18 +1,20 @@
 // pages/detail/index.ts
+import UserData from '../../assets/data/userdata'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userName:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    console.log(options)
+    console.log(options.id)
+    //this.setData({userName:UserData[].name})
   },
 
   /**
