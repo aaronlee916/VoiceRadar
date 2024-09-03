@@ -5,7 +5,7 @@
   "versionCode": 100,
   "i18nFilePath": "i18n",
   "mini-android": {
-    "sdkVersion": "1.4.2",
+    "sdkVersion": "1.4.3",
     "toolkitVersion": "0.10.0",
     "useExtendedSdk": {
       "media": false,

@@ -7,8 +7,7 @@ Component({
    */
   properties: {
     userId: {
-      type: Number,
-      value: 0
+      type: Number
     }
   },
 
@@ -52,12 +51,10 @@ Component({
         }
       )
     },
-    getUserDetails(){
+    getUserDetails() {
+      wx.setStorageSync("routeToUserId", this.properties.userId);
       wx.navigateTo({
-        url:'/pages/detail/index',
-        routeOptions:{
-          id:this.properties.userId
-        }
+        url: '/pages/detail/index',
       })
     }
   }
