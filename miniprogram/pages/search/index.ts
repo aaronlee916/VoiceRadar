@@ -13,6 +13,7 @@ Page({
     trendingStaff,
     UserData,
     active:0,
+    voiceAgeShow:false,
     sexFieldValue:null,
     sexSelectionShow:false,
     filterOptions:[],
@@ -27,7 +28,9 @@ Page({
       }
     ]
   },
-  onVoiceAgeClick(){},
+  onVoiceAgeClick(){
+    this.setData({voiceAgeShow:true})
+  },
   onChange(event) {
     this.setData({currentlySearching:event.detail.index})
   },

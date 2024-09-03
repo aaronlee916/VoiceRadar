@@ -7,9 +7,10 @@
       <van-popup show="{{ sexSelectionShow }}" round position="bottom">
         <van-cascader wx:if="{{ sexSelectionShow }}" value="{{ cascaderValue }}" title="请选择性别" options="{{ sexOptions }}" bind:close="onSexClose" bind:finish="onSexFinish" />
       </van-popup>
-      <van-field value="{{ fieldValue }}" is-link readonly label="声线年龄" placeholder="请选择声线的大致年龄" bind:tap="onVoiceAgeClick" />
-      <van-popup show="{{ show }}" round position="bottom">
-        <van-cascader wx:if="{{ show }}" value="{{ cascaderValue }}" title="请选择所在地区" options="{{ options }}" bind:close="onClose" bind:finish="onFinish" />
+      <van-field value="{{ ageFieldValue }}" is-link readonly label="声线年龄" placeholder="请选择声线的大致年龄" bind:tap="onVoiceAgeClick" />
+      <van-popup show="{{ voiceAgeShow }}" round position="bottom">
+        <view>请输入年龄...</view>
+        <van-slider value="{{ [10, 50] }}" range bind:change="onChange" />
       </van-popup>
       <van-field value="{{ fieldValue }}" is-link readonly label="大/小嗓" placeholder="请选择声压类型" bind:tap="onVoicePressure" />
       <van-popup show="{{ show }}" round position="bottom">
