@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    queryResult:UserData,
     trendingCV,
     //currentlySearching字段代表当前tab页，0为找CV功能，1为找STAFF功能
     currentlySearching: 0,
@@ -156,12 +157,14 @@ Page({
   },
   onGenreFinish(event){
     this.setData({genreValue:event.detail.value,genreShow:false})
+    //预留API接口
   },
   onFunctionTypeClick() {
     this.setData({ functionTypeShow: true })
   },
   onFunctionTypeFinish(event) {
     this.setData({ functionTypeShow: false, functionTypeValue: event.detail.value })
+    //预留API接口
   },
   onVoiceAgeClick() {
     this.setData({ voiceAgeShow: true })

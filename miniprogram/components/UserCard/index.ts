@@ -25,7 +25,9 @@ Component({
     soundPressure: '',
     voiceAge: -1,
     demoLink: '',
-    description: ''
+    description: '',
+    genre:'',
+    functionType:['']
   },
   ready() {
     this.setAttr()
@@ -47,7 +49,9 @@ Component({
           soundPressure: UserData[this.properties.userId].soundPressure,
           voiceAge: UserData[this.properties.userId].voiceAge,
           demoLink: UserData[this.properties.userId].demoLink,
-          description: UserData[this.properties.userId].description
+          description: UserData[this.properties.userId].description,
+          genre: UserData[this.properties.userId].genre,
+          functionType: UserData[this.properties.userId].functionType
         }
       )
     },

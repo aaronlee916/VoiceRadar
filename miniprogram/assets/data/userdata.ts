@@ -10,7 +10,9 @@ export const UserData = [{
   "soundPressure": "大嗓",
   "voiceAge": 25,
   "demoLink": "https://missevan.com/seiy/1821",
-  "description": "我是AaronXXXXXXXX"
+  "description": "我是AaronXXXXXXXX",
+  "genre":"古风",
+  "functionType":["歌策","歌后"]
 },
 {
   "id": 1,
@@ -24,7 +26,9 @@ export const UserData = [{
   "soundPressure": "小嗓",
   "voiceAge": 12,
   "demoLink": "https://missevan.com/seiy/1821",
-  "description": "我是喵胖XXXXXXXX"
+  "description": "我是喵胖XXXXXXXX",
+  "genre":"古风",
+  "functionType":["歌策","歌后"]
 },
 {
   "id": 2,
@@ -38,7 +42,9 @@ export const UserData = [{
   "soundPressure": "小嗓",
   "voiceAge": 25,
   "demoLink": "https://missevan.com/seiy/1821",
-  "description": "我是昊宇小鱼XXXXXXXX"
+  "description": "我是昊宇小鱼XXXXXXXX",
+  "genre":"古风",
+  "functionType":["歌策","歌后"]
 },
 {
   "id": 3,
@@ -52,7 +58,9 @@ export const UserData = [{
   "soundPressure": "大嗓",
   "voiceAge": 25,
   "demoLink": "https://missevan.com/seiy/1821",
-  "description": "我是貔貅XXXXXXXX"
+  "description": "我是貔貅XXXXXXXX",
+  "genre":"古风",
+  "functionType":["歌策","歌后"]
 },
 {
   "id": 4,
@@ -66,7 +74,9 @@ export const UserData = [{
   "soundPressure": "大嗓",
   "voiceAge": 25,
   "demoLink": "https://missevan.com/seiy/1821",
-  "description": "我是貔貅XXXXXXXX"
+  "description": "我是貔貅XXXXXXXX",
+  "genre":"古风",
+  "functionType":["歌策","歌后"]
 },{
   "id": 5,
   "name": "艾利克斯",
@@ -79,7 +89,9 @@ export const UserData = [{
   "soundPressure": "大嗓",
   "voiceAge": 25,
   "demoLink": "https://missevan.com/seiy/1821",
-  "description": "我是貔貅XXXXXXXX"
+  "description": "我是貔貅XXXXXXXX",
+  "genre":"古风",
+  "functionType":["歌策","歌后"]
 },
 {
   "id": 6,
@@ -93,7 +105,9 @@ export const UserData = [{
   "soundPressure": "大嗓",
   "voiceAge": 25,
   "demoLink": "https://missevan.com/seiy/1821",
-  "description": "我是貔貅XXXXXXXX"
+  "description": "我是貔貅XXXXXXXX",
+  "genre":"古风",
+  "functionType":["歌策","歌后"]
 },
 {
   "id": 7,
@@ -107,6 +121,8 @@ export const UserData = [{
   "soundPressure": "大嗓",
   "voiceAge": 25,
   "demoLink": "https://missevan.com/seiy/1821",
-  "description": "我是貔貅XXXXXXXX"
+  "description": "我是貔貅XXXXXXXX",
+  "genre":"古风",
+  "functionType":["歌策","歌后"]
 }
 ]
