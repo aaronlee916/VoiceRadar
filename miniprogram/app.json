@@ -6,7 +6,9 @@
     "pages/my/index",
     "pages/search/index",
     "pages/profile/index",
-    "pages/register/index"
+    "pages/register/index",
+    "pages/cvregister/index",
+    "pages/staffregister/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

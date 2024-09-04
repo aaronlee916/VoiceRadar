@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    queryResult:UserData,
+    queryResult: UserData,
     trendingCV,
     //currentlySearching字段代表当前tab页，0为找CV功能，1为找STAFF功能
     currentlySearching: 0,
@@ -17,6 +17,8 @@ Page({
     active: 0,
     voiceAgeShow: false,
     ageFieldValue: [20, 80],
+    cvSearchValue: null,
+    staffSearchValue: null,
     sexFieldValue: null,
     functionTypeValue: null,
     sexSelectionShow: false,
@@ -155,8 +157,14 @@ Page({
       }
     ]
   },
-  onGenreFinish(event){
-    this.setData({genreValue:event.detail.value,genreShow:false})
+  onCVSearch(event) {
+    //预留API接口，搜索框值为event.detail
+  },
+  onStaffSearch(event) {
+    //预留API接口，搜索框值为event.detail
+  },
+  onGenreFinish(event) {
+    this.setData({ genreValue: event.detail.value, genreShow: false })
     //预留API接口
   },
   onFunctionTypeClick() {
@@ -185,7 +193,7 @@ Page({
     });
   },
   onSexClose() {
-
+    this.setData({ sexSelectionShow: false })
   },
   onSexFinish(event) {
     this.setData({ sexFieldValue: event.detail.value, sexSelectionShow: false })

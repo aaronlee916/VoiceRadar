@@ -2,7 +2,7 @@
 <view>
   <van-tabs active="{{ active }}" bind:change="onTabChange">
     <van-tab title="找CV">
-      <van-search placeholder="请输入搜索内容..."></van-search>
+      <van-search value="{{ cvSearchValue }}" bind:search="onCVSearch" data-name="cvSearchValue" placeholder="请输入搜索内容..."></van-search>
       <van-field value="{{ sexFieldValue }}" is-link readonly label="性别" placeholder="请选择性别" bind:tap="onSexClick" />
       <van-popup show="{{ sexSelectionShow }}" round position="bottom">
         <van-cascader wx:if="{{ sexSelectionShow }}" value="{{ sexFieldValue }}" title="请选择性别" options="{{ sexOptions }}" bind:close="onSexClose" bind:finish="onSexFinish" />
@@ -30,7 +30,7 @@
       </van-grid>
     </van-tab>
     <van-tab title="找STAFF">
-      <van-search placeholder="请输入搜索内容..."></van-search>
+      <van-search value="{{ staffSearchValue }}" bind:search="onStaffSearch" data-name="staffSearchValue" placeholder="请输入搜索内容..."></van-search>
       <van-field value="{{ functionTypeValue }}" is-link readonly label="工种类型" placeholder="请选择所属工种" bind:tap="onFunctionTypeClick" />
       <van-popup show="{{ functionTypeShow }}" round position="bottom">
         <van-cascader wx:if="{{ functionTypeShow }}" value="{{ functionTypeValue }}" title="请选择所属工种" options="{{ functionTypeOptions }}" bind:close="onFunctionTypeClose" bind:finish="onFunctionTypeFinish" />
