@@ -1,20 +1,34 @@
 // components/CVCard/index.ts
-import { UserData } from '../../assets/data/userdata'
 Component({
 
   /**
    * 组件的属性列表
    */
   properties: {
-    userId: {
-      type: Number
-    }
+    user: {
+      type: Object,
+      value: {
+        name: '',
+        linkedUserId: -1,
+        isCV: false,
+        isStaff: false,
+        sex: '',
+        voiceType: '',
+        soundPressure: '',
+        voiceAge: -1,
+        demoLink: '',
+        description: '',
+        genre: [],
+        functionType: ['']
+      }
+    },
   },
 
   /**
    * 组件的初始数据
    */
   data: {
+    userId:-1,
     avatarSrc: '',
     name: '',
     linkedUserId: -1,
@@ -26,8 +40,8 @@ Component({
     voiceAge: -1,
     demoLink: '',
     description: '',
-    genre:[],
-    functionType:['']
+    genre: [],
+    functionType: ['']
   },
   ready() {
     this.setAttr()
@@ -39,19 +53,19 @@ Component({
     setAttr() {
       this.setData(
         {
-          avatarSrc: UserData[this.properties.userId].avatarLink,
-          name: UserData[this.properties.userId].name,
-          linkedUserId: UserData[this.properties.userId].linkedUserId,
-          isCV: UserData[this.properties.userId].isCV,
-          isStaff: UserData[this.properties.userId].isStaff,
-          sex: UserData[this.properties.userId].sex,
-          voiceType: UserData[this.properties.userId].voiceType,
-          soundPressure: UserData[this.properties.userId].soundPressure,
-          voiceAge: UserData[this.properties.userId].voiceAge,
-          demoLink: UserData[this.properties.userId].demoLink,
-          description: UserData[this.properties.userId].description,
-          genre: UserData[this.properties.userId].genre,
-          functionType: UserData[this.properties.userId].functionType
+          userId:this.properties.user.id,
+          avatarSrc: this.properties.user.avatarLink,
+          name: this.properties.user.name,
+          linkedUserId: this.properties.user.linkedUserId,
+          isCV: this.properties.user.isCV,
+          isStaff: this.properties.user.isStaff,
+          sex: this.properties.user.sex,
+          voiceType: this.properties.user.voiceType,
+          soundPressure: this.properties.user.soundPressure,
+          demoLink: this.properties.user.demoLink,
+          description: this.properties.user.description,
+          genre: this.properties.user.genre,
+          functionType: this.properties.user.functionType
         }
       )
     },

@@ -1,5 +1,4 @@
 // pages/index/index.ts
-import { UserData } from '../../assets/data/userdata'
 
 Page({
 
@@ -7,14 +6,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    UserData,
-    id:-1
+    UserData: {},
+    id: -1
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad() {
-
+  async onLoad() {
+    wx.request({
+      url: 'https://voiceradarserver.onrender.com/v1/getAllUsers',
+      method: 'GET',
+      success: (res) => {
+        this.setData({ UserData: res.data })
+      },
+      fail:(err)=>{
+        console.log(err)
+      }
+    })
   },
 
   /**

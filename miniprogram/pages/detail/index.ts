@@ -1,22 +1,27 @@
 // pages/detail/index.ts
-import { UserData } from '../../assets/data/userdata'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    user:{},
-    userName: ''
+    UserData: {},
+    userName: '',
+    user: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad() {
-    let id = wx.getStorageSync('routeToUserId')
-    let user=UserData[id]
-    this.setData({ user,userName: user.name })
+  async onLoad() {
+    wx.request({
+      url:'https://voiceradarserver.onrender.com/v1/getAllUsers',
+      method:'GET',
+      success:(res)=>{
+        this.setData({UserData:res.data})
+      }
+    })
   },
 
   /**
