@@ -3,7 +3,7 @@
   <image src="{{user.avatarLink}}" />
   <view>{{user.name}}</view>
   <view>{{user.description}}</view>
-  <text>声展{{'\n'}}</text>
+  <view>声展</view>
   <text>联系方式</text>
   <view>{{user.email}}</view>
   <view>{{user.qq}}</view>

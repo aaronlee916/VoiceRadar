@@ -15,8 +15,7 @@
       <van-popup show="{{ genreShow }}" round position="bottom">
         <van-cascader wx:if="{{ genreShow }}" value="{{ genreValue }}" title="请选择擅长风格" options="{{ genreOptions }}" bind:close="onGenreClose" bind:finish="onGenreFinish" />
       </van-popup>
-      <UserCard wx:key="{{key}}" wx:for="" />
-
+      <van-button type="primary" size="large" bind:click="onFilter">筛选</van-button>
       <text>热门CV</text>
       <van-grid column-num="4">
         <van-grid-item wx:key="{{key}}" icon="{{UserData[item].avatarLink}}" text="{{UserData[item].name}}" wx:for="{{ trendingCV }}" wx:for="{{8}}" bind:tap="onSelectTrending" data-id="{{UserData[item].id}}" />
@@ -32,6 +31,7 @@
       <van-popup show="{{ genreShow }}" round position="bottom">
         <van-cascader wx:if="{{ genreShow }}" value="{{ genreValue }}" title="请选择擅长风格" options="{{ genreOptions }}" bind:close="onGenreClose" bind:finish="onGenreFinish" />
       </van-popup>
+      <van-button type="primary" size="large" bind:click="onFilter">筛选</van-button>
       <text>热门STAFF</text>
       <van-grid column-num="4">
         <van-grid-item icon="{{UserData[item].avatarLink}}" text="{{UserData[item].name}}" wx:for="{{ trendingStaff }}" wx:for="{{8}}" />

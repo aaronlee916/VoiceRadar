@@ -166,6 +166,9 @@ Page({
   onGenreClose(){
     this.setData({genreShow:false})
   },
+  onFilter(){
+
+  },
   onGenreFinish(event) {
     this.setData({ genreValue: event.detail.value, genreShow: false })
     //预留API接口
