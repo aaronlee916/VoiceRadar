@@ -7,26 +7,19 @@
       <van-popup show="{{ sexSelectionShow }}" round position="bottom">
         <van-cascader wx:if="{{ sexSelectionShow }}" value="{{ sexFieldValue }}" title="请选择性别" options="{{ sexOptions }}" bind:close="onSexClose" bind:finish="onSexFinish" />
       </van-popup>
-      <van-field value="{{ ageFieldValue[0]+'岁到'+ageFieldValue[1]+'岁' }}" is-link readonly label="声线年龄" placeholder="请选择声线的大致年龄" bind:tap="onVoiceAgeClick" />
-      <van-popup custom-style="height: 200rpx" show="{{ voiceAgeShow }}" round position="bottom" closeable bind:close="onVoiceAgeClose">
-        <view class="ageContent">
-          <view class="ageHint">请输入年龄...</view>
-          <van-slider value="{{ ageFieldValue }}" use-button-slot range bind:change="onAgeChange">
-            <view class="custom-button" slot="left-button">{{ ageFieldValue[0] }}</view>
-            <view class="custom-button" slot="right-button">{{ ageFieldValue[1] }}</view>
-          </van-slider>
-        </view>
-      </van-popup>
       <van-field value="{{ voicePressureValue }}" is-link readonly label="大/小嗓" placeholder="请选择声压类型" bind:tap="onVoicePressureClick" />
       <van-popup show="{{ voicePressureShow }}" round position="bottom">
         <van-cascader wx:if="{{ voicePressureShow }}" value="{{ voicePressureValue }}" title="请选择声压类型" options="{{ voicePressureOptions }}" bind:close="onVoicePressureClose" bind:finish="onVoicePressureFinish" />
       </van-popup>
-
-      <UserCard wx:for="" />
+      <van-field value="{{ genreValue }}" is-link readonly label="擅长风格" placeholder="请选择擅长风格" bind:tap="onGenreClick" />
+      <van-popup show="{{ genreShow }}" round position="bottom">
+        <van-cascader wx:if="{{ genreShow }}" value="{{ genreValue }}" title="请选择擅长风格" options="{{ genreOptions }}" bind:close="onGenreClose" bind:finish="onGenreFinish" />
+      </van-popup>
+      <UserCard wx:key="{{key}}" wx:for="" />
 
       <text>热门CV</text>
       <van-grid column-num="4">
-        <van-grid-item icon="{{UserData[item].avatarLink}}" text="{{UserData[item].name}}" wx:for="{{ trendingCV }}" wx:for="{{8}}" bind:tap="onSelectTrending" data-id="{{UserData[item].id}}" />
+        <van-grid-item wx:key="{{key}}" icon="{{UserData[item].avatarLink}}" text="{{UserData[item].name}}" wx:for="{{ trendingCV }}" wx:for="{{8}}" bind:tap="onSelectTrending" data-id="{{UserData[item].id}}" />
       </van-grid>
     </van-tab>
     <van-tab title="找STAFF">

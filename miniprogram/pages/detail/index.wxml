@@ -1,2 +1,11 @@
 <!--pages/detail/index.wxml-->
-<text wx:for="{{user}}">{{item+'\n'}}</text>
+<view>
+  <image src="{{user.avatarLink}}" />
+  <view>{{user.name}}</view>
+  <view>{{user.description}}</view>
+  <text>声展{{'\n'}}</text>
+  <text>联系方式</text>
+  <view>{{user.email}}</view>
+  <view>{{user.qq}}</view>
+  <view>{{user.weiboLink}}</view>
+</view>

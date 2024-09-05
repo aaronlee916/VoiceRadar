@@ -8,6 +8,7 @@
     "van-field": "@vant/weapp/field/index",
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
-    "van-slider": "@vant/weapp/slider/index"
+    "van-slider": "@vant/weapp/slider/index",
+    "van-button": "@vant/weapp/button/index"
   }
 }

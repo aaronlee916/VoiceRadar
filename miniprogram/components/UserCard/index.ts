@@ -26,7 +26,7 @@ Component({
     voiceAge: -1,
     demoLink: '',
     description: '',
-    genre:'',
+    genre:[],
     functionType:['']
   },
   ready() {

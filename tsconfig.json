@@ -28,7 +28,7 @@
   },
   "include": [
     "./**/*.ts"
-  ],
+, "miniprogram/assets/data/userdata.ts"  ],
   "exclude": [
     "node_modules"
   ]

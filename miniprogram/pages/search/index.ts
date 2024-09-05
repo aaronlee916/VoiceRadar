@@ -163,6 +163,9 @@ Page({
   onStaffSearch(event) {
     //预留API接口，搜索框值为event.detail
   },
+  onGenreClose(){
+    this.setData({genreShow:false})
+  },
   onGenreFinish(event) {
     this.setData({ genreValue: event.detail.value, genreShow: false })
     //预留API接口
